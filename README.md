@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> This fork uses [`uaysk/vllm-pascal`](https://github.com/uaysk/vllm-pascal) for `vllm` in Docker builds instead of the upstream `vllm/vllm-openai` image.
+> It is intended for NVIDIA Pascal GPUs with `compute capability 6.1` such as Tesla P40.
+> The current Docker image tag is `mineru:pascal-vllm`, and [`docker/compose.yaml`](docker/compose.yaml) is already configured to use it.
+> Recommended build command: `docker build --build-arg MAX_JOBS=3 -t mineru:pascal-vllm -f docker/global/Dockerfile .`
+
 <div align="center" xmlns="http://www.w3.org/1999/html">
 <!-- logo -->
 <p align="center">
